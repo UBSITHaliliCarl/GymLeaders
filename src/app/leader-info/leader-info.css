@@ -1,0 +1,66 @@
+.card {
+    border: 2px solid #4a90e2;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: white;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-icon { 
+    font-size: 2rem; 
+    text-align: center; 
+}
+
+h3 { 
+    margin: 0.5rem 0 0.1rem 0; 
+    text-align: center; 
+}
+
+.age-info { 
+    font-size: 0.85rem; 
+    text-align: center; 
+    color: #666; 
+    margin: 0 0 0.5rem 0; 
+}
+
+.city, .badge-name { 
+    font-size: 0.9rem; 
+    margin: 0.2rem 0; 
+    font-weight: 500; 
+}
+
+.toggle-btn { 
+    color: white; 
+    border: none; 
+    padding: 0.5rem; 
+    margin: 0.5rem 0; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 0.8rem; 
+}
+
+.desc { 
+    font-style: italic; 
+    font-size: 0.85rem; 
+    color: #555; 
+    margin: 0.5rem 0; 
+    padding: 0.5rem; 
+    background-color: #f9f9f9; 
+    border-radius: 4px; 
+}
+
+.team-section h4 { 
+    margin: 0.5rem 0 0.2rem 0; 
+    font-size: 0.9rem; 
+    color: #333; 
+}
+
+.team-section ul { 
+    padding-left: 1.2rem; 
+    margin: 0; 
+    font-size: 0.85rem; 
+}

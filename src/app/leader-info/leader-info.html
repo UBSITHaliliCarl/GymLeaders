@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="card" [style.border-color]="cardBorderColor">
+    <div class="badge-icon">{{ leader.badgeIcon }}</div>
+   
+    <h3 [style.color]="titleColor">{{ leader.name }}</h3>
+    <p class="age-info">⏳ Age: {{ leader.age }}</p>
+    <p class="city">📍 {{ leader.city }}</p>
+    <p class="badge-name">🏷️ {{ leader.badge }}</p>
+   
+    <button
+      class="toggle-btn"
+      [style.background-color]="buttonColor"
+      (click)="toggleDescription()">
+      Description
+    </button>
+   
+    @if (showDescription()) {
+      <p class="desc">{{ leader.desc }}</p>
+    }
+   
+    <div class="team-section">
+      <h4>Signature Team:</h4>
+      <ul>
+        @for (pokemon of leader.team; track pokemon.name) {
+          <li>{{ pokemon.name }} (Lv. {{ pokemon.level }})</li>
+        }
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

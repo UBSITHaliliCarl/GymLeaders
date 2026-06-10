@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johto Region</title>
+</head>
+<body>
+  <section class="region-section">
+    <h2>Johto Region Gym Leaders</h2>
+    <div class="card-grid">
+      @for (leader of leaders(); track leader.name) {
+        <app-leader-info 
+          [leader]="leader" 
+          [cardBorderColor]="'#4a90e2'" 
+          [titleColor]="'#004a99'"
+          [buttonColor]="'#4a90e2'">
+        </app-leader-info>
+      }
+    </div>
+  </section>  
+</body>
+</html>
