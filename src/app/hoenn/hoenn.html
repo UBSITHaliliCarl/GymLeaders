@@ -1,0 +1,15 @@
+<body>
+  <section class="region-section">
+    <h2>Hoenn Region Gym Leaders</h2>
+    <div class="card-grid">
+      @for (leader of leaders(); track leader.name) {
+        <app-leader-info
+          [leader]="leader"
+          [cardBorderColor]="'#00a896'"
+          [titleColor]="'#028090'"
+          [buttonColor]="'#00a896'">
+        </app-leader-info>
+      }
+    </div>
+  </section>  
+</body>

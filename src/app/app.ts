@@ -11,5 +11,4 @@ import { Navbar } from './navbar/navbar';
 })
 export class App {
   protected readonly title = signal('gym-leaders');
-  title = 'Hello GitHub! This is my Gym Leaders Application.';
 }
