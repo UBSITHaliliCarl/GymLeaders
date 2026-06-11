@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, signal } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, inject } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { LeaderInfo } from '../leader-info/leader-info';
 
 @Component({
@@ -10,7 +11,13 @@ import { LeaderInfo } from '../leader-info/leader-info';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Johto {
-  leaders = signal([
+  private route = inject(ActivatedRoute);
+  regionName = this.route.snapshot.data['regionName'] || 'Johto';
+  cardBorderColor = this.route.snapshot.data['cardBorderColor'] || '#4a90e2';
+  titleColor = this.route.snapshot.data['titleColor'] || '#004a99';
+  buttonColor = this.route.snapshot.data['buttonColor'] || '#4a90e2';
+
+  leaders = this.route.snapshot.data['leaders'] || signal([
     { name: 'Falkner', age: 18, city: 'Violet City', badge: 'Zephyr Badge', desc: 'The Elegant Flying-Type User.', badgeIcon: '🛡️', team: [{ name: 'Pidgey', level: 9 }, { name: 'Pidgeotto', level: 13 }] },
     { name: 'Bugsy', age: 12, city: 'Azalea Town', badge: 'Hive Badge', desc: 'The Walking Bug Pokémon Encyclopedia.', badgeIcon: '🛡️', team: [{ name: 'Scyther', level: 17 }, { name: 'Kakuna', level: 15 }, { name: 'Metapod', level: 15 }] },
     { name: 'Whitney', age: 16, city: 'Goldenrod City', badge: 'Plain Badge', desc: 'The Incredibly Pretty Girl.', badgeIcon: '🛡️', team: [{ name: 'Clefairy', level: 18 }, { name: 'Miltank', level: 20 }] },
